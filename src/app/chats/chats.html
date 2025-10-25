@@ -1,0 +1,398 @@
+  <div class="page">
+    <header class="header">
+      <a href="/" class="header__logo-link">
+        <img class="header__logo"  src="assets/images/asset-3-2x-1.png" alt="RealData Portal Logo">
+      </a>
+
+      <nav class="header__nav">
+        <a href="/" class="header__nav-link">Home</a>
+        <a href="/datasets.html" class="header__nav-link">Datasets</a>
+        <a href="/chats.html" class="header__nav-link header__nav-link--active">Search</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="header__user">
+          <div class="avatar">
+            <img class="avatar__image"  src="assets/images/freepik--the-style-is-candid-image-photography-with-natural--483.png" alt="Ahmad Abdelqader">
+          </div>
+          <span class="header__username">Ahmad Abdelqader</span>
+          <button class="header__dropdown-btn" aria-label="User menu">
+            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header__separator"></div>
+
+        <button class="header__notification-btn" aria-label="Notifications">
+          <img class="icon"  src="assets/images/group-22336.png" alt="Notifications">
+        </button>
+      </div>
+    </header>
+
+    <main class="main main--search">
+      <section class="search-page">
+        <div class="search-page__container">
+          <div class="search-page__header">
+            <h1 class="search-page__title">Search Data & Insights</h1>
+            <p class="search-page__subtitle">Find the information you need across all data sources</p>
+          </div>
+
+          <div class="search-page__search-bar">
+            <div class="search-bar">
+              <svg class="search-bar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#939598" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 19L14.65 14.65" stroke="#939598" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input
+                type="text"
+                class="search-bar__input"
+                placeholder="Search for indicators, reports, data..."
+                aria-label="Search"
+              >
+              <button class="search-bar__btn btn btn--primary">
+                Search
+              </button>
+            </div>
+          </div>
+
+          <div class="search-page__filters">
+            <div class="filter-tabs">
+              <button class="filter-tabs__tab filter-tabs__tab--active">All Results</button>
+              <button class="filter-tabs__tab">Indicators</button>
+              <button class="filter-tabs__tab">Reports</button>
+              <button class="filter-tabs__tab">Data Sets</button>
+              <button class="filter-tabs__tab">News</button>
+            </div>
+
+            <div class="filter-options">
+              <button class="filter-btn">
+                <svg class="filter-btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M2.5 5.83333H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M5 10H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M8.33334 14.1667H11.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="filter-btn__text">Filter</span>
+              </button>
+
+              <button class="filter-btn">
+                <svg class="filter-btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M2.5 5H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M2.5 10H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M2.5 15H17.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="15" cy="5" r="1.5" fill="currentColor"/>
+                  <circle cx="5" cy="10" r="1.5" fill="currentColor"/>
+                  <circle cx="12" cy="15" r="1.5" fill="currentColor"/>
+                </svg>
+                <span class="filter-btn__text">Sort by: Relevance</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="search-page__content">
+            <aside class="search-sidebar">
+              <div class="search-sidebar__section">
+                <h3 class="search-sidebar__title">Categories</h3>
+                <ul class="search-sidebar__list">
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Economic Indicators</span>
+                      <span class="checkbox__count">(125)</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Social Statistics</span>
+                      <span class="checkbox__count">(89)</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Environmental Data</span>
+                      <span class="checkbox__count">(67)</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Healthcare</span>
+                      <span class="checkbox__count">(54)</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Education</span>
+                      <span class="checkbox__count">(43)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="search-sidebar__separator"></div>
+
+              <div class="search-sidebar__section">
+                <h3 class="search-sidebar__title">Date Range</h3>
+                <ul class="search-sidebar__list">
+                  <li class="search-sidebar__item">
+                    <label class="radio">
+                      <input type="radio" name="date" class="radio__input" checked>
+                      <span class="radio__label">All time</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="radio">
+                      <input type="radio" name="date" class="radio__input">
+                      <span class="radio__label">Last 24 hours</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="radio">
+                      <input type="radio" name="date" class="radio__input">
+                      <span class="radio__label">Last week</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="radio">
+                      <input type="radio" name="date" class="radio__input">
+                      <span class="radio__label">Last month</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="radio">
+                      <input type="radio" name="date" class="radio__input">
+                      <span class="radio__label">Last year</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="search-sidebar__separator"></div>
+
+              <div class="search-sidebar__section">
+                <h3 class="search-sidebar__title">Data Source</h3>
+                <ul class="search-sidebar__list">
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Government</span>
+                      <span class="checkbox__count">(245)</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">Research Institutions</span>
+                      <span class="checkbox__count">(187)</span>
+                    </label>
+                  </li>
+                  <li class="search-sidebar__item">
+                    <label class="checkbox">
+                      <input type="checkbox" class="checkbox__input">
+                      <span class="checkbox__label">International Organizations</span>
+                      <span class="checkbox__count">(92)</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+
+            <div class="search-results">
+              <div class="search-results__header">
+                <p class="search-results__info">Showing <strong>378 results</strong></p>
+              </div>
+
+              <div class="search-results__list">
+                <article class="result-card">
+                  <div class="result-card__header">
+                    <div class="result-card__badges">
+                      <span class="badge badge--blue">Indicator</span>
+                      <span class="badge badge--green">Updated</span>
+                    </div>
+                    <button class="result-card__bookmark" aria-label="Bookmark">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 2H15C15.5523 2 16 2.44772 16 3V18L10 15L4 18V3C4 2.44772 4.44772 2 5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <h3 class="result-card__title">GDP Growth Rate - Q4 2024</h3>
+                  <p class="result-card__description">
+                    The Gross Domestic Product (GDP) growth rate measures the percentage change in the value of all goods and services produced in the economy during Q4 2024 compared to the previous quarter.
+                  </p>
+                  <div class="result-card__meta">
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      Updated 2 days ago
+                    </span>
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 5L8 1L14 5V11.6667C14 12.403 13.403 13 12.6667 13H3.33333C2.59695 13 2 12.403 2 11.6667V5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      Ministry of Finance
+                    </span>
+                  </div>
+                  <div class="result-card__actions">
+                    <button class="btn-link">
+                      <span class="btn-link__text">View Details</span>
+                      <svg class="btn-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+
+                <article class="result-card">
+                  <div class="result-card__header">
+                    <div class="result-card__badges">
+                      <span class="badge badge--yellow">Report</span>
+                    </div>
+                    <button class="result-card__bookmark" aria-label="Bookmark">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 2H15C15.5523 2 16 2.44772 16 3V18L10 15L4 18V3C4 2.44772 4.44772 2 5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <h3 class="result-card__title">Annual Economic Report 2024</h3>
+                  <p class="result-card__description">
+                    Comprehensive analysis of economic performance, trends, and forecasts for the fiscal year 2024, including detailed sectoral breakdowns and policy recommendations.
+                  </p>
+                  <div class="result-card__meta">
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      Published 1 week ago
+                    </span>
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 5L8 1L14 5V11.6667C14 12.403 13.403 13 12.6667 13H3.33333C2.59695 13 2 12.403 2 11.6667V5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      Central Bank
+                    </span>
+                  </div>
+                  <div class="result-card__actions">
+                    <button class="btn-link">
+                      <span class="btn-link__text">View Details</span>
+                      <svg class="btn-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+
+                <article class="result-card">
+                  <div class="result-card__header">
+                    <div class="result-card__badges">
+                      <span class="badge badge--blue">Data Set</span>
+                    </div>
+                    <button class="result-card__bookmark" aria-label="Bookmark">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 2H15C15.5523 2 16 2.44772 16 3V18L10 15L4 18V3C4 2.44772 4.44772 2 5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <h3 class="result-card__title">Population Demographics 2020-2024</h3>
+                  <p class="result-card__description">
+                    Detailed demographic data including age distribution, gender ratios, urban/rural population splits, and migration patterns across all regions for the period 2020-2024.
+                  </p>
+                  <div class="result-card__meta">
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      Updated 5 days ago
+                    </span>
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 5L8 1L14 5V11.6667C14 12.403 13.403 13 12.6667 13H3.33333C2.59695 13 2 12.403 2 11.6667V5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      National Statistics Office
+                    </span>
+                  </div>
+                  <div class="result-card__actions">
+                    <button class="btn-link">
+                      <span class="btn-link__text">View Details</span>
+                      <svg class="btn-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+
+                <article class="result-card">
+                  <div class="result-card__header">
+                    <div class="result-card__badges">
+                      <span class="badge badge--blue">Indicator</span>
+                    </div>
+                    <button class="result-card__bookmark" aria-label="Bookmark">
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M5 2H15C15.5523 2 16 2.44772 16 3V18L10 15L4 18V3C4 2.44772 4.44772 2 5 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <h3 class="result-card__title">Unemployment Rate - January 2025</h3>
+                  <p class="result-card__description">
+                    Monthly unemployment statistics showing the percentage of the labor force that is jobless and actively seeking employment during January 2025.
+                  </p>
+                  <div class="result-card__meta">
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 4V8L11 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                      </svg>
+                      Updated 3 hours ago
+                    </span>
+                    <span class="result-card__meta-item">
+                      <svg class="result-card__icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 5L8 1L14 5V11.6667C14 12.403 13.403 13 12.6667 13H3.33333C2.59695 13 2 12.403 2 11.6667V5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                      </svg>
+                      Ministry of Labor
+                    </span>
+                  </div>
+                  <div class="result-card__actions">
+                    <button class="btn-link">
+                      <span class="btn-link__text">View Details</span>
+                      <svg class="btn-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="pagination">
+                <button class="pagination__btn pagination__btn--prev" disabled>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Previous
+                </button>
+                <div class="pagination__pages">
+                  <button class="pagination__page pagination__page--active">1</button>
+                  <button class="pagination__page">2</button>
+                  <button class="pagination__page">3</button>
+                  <span class="pagination__ellipsis">...</span>
+                  <button class="pagination__page">10</button>
+                </div>
+                <button class="pagination__btn pagination__btn--next">
+                  Next
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>

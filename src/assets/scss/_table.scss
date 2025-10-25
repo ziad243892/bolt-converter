@@ -1,0 +1,116 @@
+.datasets-table {
+  overflow-x: auto;
+  border-radius: $border-radius-md;
+  border: 1px solid $color-border;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $font-primary;
+
+  &__head {
+    background-color: $color-bg-light;
+  }
+
+  &__row {
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba(0, 82, 135, 0.02);
+    }
+  }
+
+  &__header {
+    padding: 16px 20px;
+    text-align: left;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $color-text-primary;
+    white-space: nowrap;
+
+    &--sortable {
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: rgba(0, 82, 135, 0.05);
+      }
+
+      span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+
+    &--sorted-asc,
+    &--sorted-desc {
+      .table__sort-icon {
+        opacity: 1;
+      }
+    }
+
+    &--sorted-desc {
+      .table__sort-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__sort-icon {
+    opacity: 0.4;
+    transition: all 0.2s;
+  }
+
+  &__body {
+    background-color: $color-bg-white;
+  }
+
+  &__cell {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $color-text-secondary;
+
+    &--name {
+      font-weight: $font-weight-medium;
+      color: $color-text-primary;
+    }
+
+    &--actions {
+      padding: 12px 20px;
+    }
+  }
+
+  &__action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    color: $color-text-muted;
+    transition: all 0.2s;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $color-bg-light;
+      color: $color-primary;
+    }
+  }
+}

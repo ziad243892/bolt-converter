@@ -1,0 +1,50 @@
+.trend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px $spacing-md;
+  background-color: $color-bg-white;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: 20px;
+    line-height: 35px;
+    color: $color-text-primary;
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-text-muted;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__trend-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__trend {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: $font-weight-regular;
+    font-size: 12px;
+    line-height: 35px;
+    color: $color-text-light;
+    white-space: nowrap;
+  }
+}

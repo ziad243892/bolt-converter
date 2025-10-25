@@ -1,0 +1,113 @@
+.datasets-hero {
+  background: linear-gradient(135deg, #003d5c 0%, #005287 100%);
+  padding: 60px 100px;
+  color: $color-bg-white;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: 50px 50px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 40px $spacing-md;
+  }
+
+  &__content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: 48px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0 0 40px;
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 18px 60px 18px 24px;
+    font-size: 16px;
+    font-family: $font-primary;
+    border: none;
+    border-radius: 50px;
+    background-color: $color-bg-white;
+    color: $color-text-primary;
+
+    &::placeholder {
+      color: $color-text-light;
+    }
+
+    &:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.5);
+      outline-offset: 2px;
+    }
+  }
+
+  &__search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary-dark;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: $color-bg-white;
+
+    &:hover {
+      background-color: #002d47;
+    }
+  }
+
+  &__tips {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint-tablet) {
+      gap: 12px;
+    }
+  }
+
+  &__tip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 14px;
+    }
+  }
+
+  &__tip-icon {
+    flex-shrink: 0;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

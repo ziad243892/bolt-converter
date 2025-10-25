@@ -1,0 +1,38 @@
+.portal-link {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-sm 20px;
+  background-color: $color-bg-white;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-sm;
+  transition: background-color 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-bg-light;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  &__text {
+    flex: 1;
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+    color: $color-text-primary;
+    text-align: left;
+  }
+
+  &__external {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+}

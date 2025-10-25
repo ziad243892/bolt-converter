@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: $spacing-lg;
+  padding: $spacing-lg 100px $spacing-xl;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: $spacing-lg 50px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: $spacing-lg $spacing-md;
+  }
+}

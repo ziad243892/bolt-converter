@@ -1,0 +1,10 @@
+.content-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+
+  @media (max-width: $breakpoint-desktop) {
+    flex-direction: column;
+  }
+}

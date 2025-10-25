@@ -1,0 +1,24 @@
+.portals {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: $spacing-lg $spacing-md;
+  background-color: $color-bg-white;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: -0.5px;
+    color: $color-text-primary;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+}

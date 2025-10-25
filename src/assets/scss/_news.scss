@@ -1,0 +1,46 @@
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  padding: $spacing-lg $spacing-md;
+  background-color: $color-bg-white;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-md;
+  flex: 1;
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: -0.5px;
+    color: $color-text-primary;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    max-height: 512px;
+    overflow-y: auto;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $color-bg-light;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color-border;
+      border-radius: 3px;
+
+      &:hover {
+        background: $color-text-light;
+      }
+    }
+  }
+}

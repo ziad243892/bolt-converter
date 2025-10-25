@@ -1,0 +1,26 @@
+.input {
+  flex: 1;
+  height: 40px;
+  padding: 0 12px;
+  font-family: $font-primary;
+  background-color: $color-bg-white;
+  border: 1px solid #9da4ae;
+  border-radius: $border-radius-sm;
+  font-size: 14px;
+  color: $color-text-primary;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: $color-text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $color-primary;
+  }
+
+  &--small {
+    width: 100%;
+    padding-left: 40px;
+  }
+}

@@ -1,0 +1,44 @@
+.datasets-page {
+  min-height: calc(100vh - 70px);
+  background-color: $color-bg-light;
+}
+
+.datasets-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 30px;
+  padding: 30px 100px;
+  max-width: 1920px;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: 30px 50px;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 20px $spacing-md;
+    grid-template-columns: 1fr;
+  }
+}
+
+.datasets-main {
+  background-color: $color-bg-white;
+  border-radius: $border-radius-lg;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.datasets-header {
+  margin-bottom: 24px;
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: 24px;
+    line-height: 1.3;
+    color: $color-text-primary;
+    margin: 0;
+  }
+}

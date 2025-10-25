@@ -1,0 +1,51 @@
+.indicator-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+  width: 100%;
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    flex: 1;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    font-size: 18px;
+    line-height: 31px;
+    color: $color-text-primary;
+  }
+
+  &__meta {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__date {
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+    font-size: 12px;
+    line-height: 26px;
+    color: $color-text-muted;
+    text-align: justify;
+    white-space: nowrap;
+  }
+
+  &__description {
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-text-muted;
+  }
+}
