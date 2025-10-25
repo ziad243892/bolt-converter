@@ -1,0 +1,215 @@
+<div class="home">
+  <header class="home__header">
+    <img class="home__logo" alt="Logo" src="assets/images/asset-3-2x-1.png" />
+
+    <nav class="home__nav">
+      @for (item of navigationItems(); track $index) {
+        <div class="home__nav-item" [class.home__nav-item--active]="item.active">
+          <div class="home__nav-label">{{ item.label }}</div>
+          @if (item.active) {
+            <div class="home__nav-indicator"></div>
+          }
+        </div>
+      }
+    </nav>
+
+    <div class="home__actions">
+      <button class="home__action-btn home__action-btn--ghost">
+        <img class="home__action-icon" alt="Language" src="assets/images/language.svg" />
+        <span class="home__action-text home__action-text--rtl">عربي</span>
+      </button>
+
+      <button class="home__action-btn home__action-btn--gradient">
+        <img class="home__action-icon" alt="Auto awesome" src="assets/images/auto-awesome-24dp-e8eaed--2--1.svg" />
+        <span class="home__action-text">Explore with QueryPro</span>
+      </button>
+
+      <button class="home__action-btn home__action-btn--primary">
+        <img class="home__action-icon" alt="Login" src="assets/images/login.svg" />
+        <span class="home__action-text">Login</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="home__hero">
+    <div class="home__hero-content">
+      <div class="home__hero-text">
+        <h1 class="home__hero-title">Welcome to Datasets Repository</h1>
+
+        <div class="home__search-wrapper">
+          <input
+            type="text"
+            placeholder="Datasets Search"
+            class="home__search-input"
+            [(ngModel)]="searchQuery"
+          />
+          <button class="home__search-btn">
+            <img class="home__search-icon" alt="Search Icon" src="assets/images/icon-1.svg" />
+          </button>
+        </div>
+      </div>
+
+      <div class="home__hero-features">
+        @for (feature of heroFeatures(); track $index) {
+          <div class="home__hero-feature">
+            <div class="home__hero-feature-icon">
+              <img [class.home__hero-feature-icon--rotated]="$index === 0" alt="Icon" [src]="feature.icon" />
+            </div>
+            <p class="home__hero-feature-text">{{ feature.text }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <div class="home__content">
+    <aside class="home__sidebar">
+      <div class="home__sidebar-inner">
+        <div class="home__sidebar-search">
+          <mat-icon class="home__sidebar-search-icon">search</mat-icon>
+          <input
+            type="text"
+            placeholder="Search"
+            class="home__sidebar-search-input"
+            [(ngModel)]="categoriesSearchQuery"
+          />
+        </div>
+
+        <div class="home__sidebar-divider"></div>
+
+        <h2 class="home__sidebar-title">Dataset Categories</h2>
+
+        <div class="home__categories">
+          @for (category of categories(); track $index) {
+            <div class="home__category">
+              <button
+                class="home__category-header"
+                (click)="toggleCategory(category.name)"
+              >
+                <img class="home__category-icon" [alt]="category.name" [src]="category.icon" />
+                <div class="home__category-info">
+                  <span class="home__category-name">{{ category.name }}</span>
+                  <span class="home__category-count">({{ category.count }} Datasets)</span>
+                </div>
+                @if (category.children.length > 0) {
+                  <mat-icon class="home__category-chevron">
+                    {{ isExpanded(category.name) ? 'expand_more' : 'chevron_right' }}
+                  </mat-icon>
+                }
+              </button>
+
+              @if (category.children.length > 0 && isExpanded(category.name)) {
+                <div class="home__category-children">
+                  @for (child of category.children; track $index) {
+                    <button class="home__category-child">
+                      <span class="home__category-child-name">{{ child.name }}</span>
+                      <img class="home__category-child-icon" alt="Icon" src="assets/images/icon-2.svg" />
+                    </button>
+                  }
+                </div>
+              }
+
+              @if ($index < categories().length - 1) {
+                <div class="home__category-divider"></div>
+              }
+            </div>
+          }
+        </div>
+
+        <button class="home__request-btn">
+          <img class="home__request-icon" alt="Plus Icon" src="assets/images/icon-4.svg" />
+          <span class="home__request-text">Request New Dataset</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="home__main">
+      <h2 class="home__main-title">Recently Updated Datasets</h2>
+
+      <div class="home__table-wrapper">
+        <table class="home__table">
+          <thead class="home__table-head">
+            <tr class="home__table-row">
+              <th class="home__table-header">
+                <div class="home__table-header-content">
+                  <span class="home__table-header-text">Dataset Name</span>
+                  <img class="home__table-sort-icon" alt="Sort icon" src="assets/images/sort-icon.svg" />
+                </div>
+              </th>
+              <th class="home__table-header">
+                <div class="home__table-header-content">
+                  <span class="home__table-header-text">Category</span>
+                  <img class="home__table-sort-icon" alt="Sort icon" src="assets/images/sort-icon-2.svg" />
+                </div>
+              </th>
+              <th class="home__table-header">
+                <div class="home__table-header-content">
+                  <span class="home__table-header-text">Last Updated</span>
+                  <img class="home__table-sort-icon" alt="Sort icon" src="assets/images/sort-icon.svg" />
+                </div>
+              </th>
+              <th class="home__table-header home__table-header--actions">
+                <span class="home__table-header-text">Actions</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="home__table-body">
+            @for (dataset of datasets(); track $index) {
+              <tr class="home__table-row">
+                <td class="home__table-cell">
+                  <span class="home__table-cell-text">{{ dataset.name }}</span>
+                </td>
+                <td class="home__table-cell">
+                  <span class="home__table-cell-text">{{ dataset.category }}</span>
+                </td>
+                <td class="home__table-cell">
+                  <span class="home__table-cell-text">{{ dataset.lastUpdated }}</span>
+                </td>
+                <td class="home__table-cell">
+                  <div class="home__table-actions">
+                    <button class="home__table-action-btn">
+                      <img class="home__table-action-icon" alt="Info" [src]="dataset.infoIcon" />
+                    </button>
+                    <button class="home__table-action-btn">
+                      <img class="home__table-action-icon" alt="Table" [src]="dataset.tableIcon" />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <div class="home__pagination">
+        <button class="home__pagination-btn home__pagination-btn--nav">
+          <img class="home__pagination-icon" alt="Previous" src="assets/images/leading-icon-1.svg" />
+        </button>
+
+        <button class="home__pagination-btn home__pagination-btn--active">
+          <span class="home__pagination-text">1</span>
+        </button>
+
+        <button class="home__pagination-btn">
+          <span class="home__pagination-text">2</span>
+        </button>
+
+        <button class="home__pagination-btn">
+          <span class="home__pagination-text">3</span>
+        </button>
+
+        <button class="home__pagination-btn home__pagination-btn--ellipsis">
+          <span class="home__pagination-text">...</span>
+        </button>
+
+        <button class="home__pagination-btn">
+          <span class="home__pagination-text">999</span>
+        </button>
+
+        <button class="home__pagination-btn home__pagination-btn--nav">
+          <img class="home__pagination-icon" alt="Next" src="assets/images/leading-icon.svg" />
+        </button>
+      </div>
+    </main>
+  </div>
+</div>
